@@ -1,0 +1,20 @@
+server:
+  port:9527
+  
+spring:
+  application:
+    name: springcloud-config
+  cloud:
+    gateway:
+      routes:
+        - id: gateway-payment
+          uri: lb://cloud-payment-service
+          predicates:
+          - Path=/payment/getid/**
+    
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: 
+      defaultZone: http://localhost:7001/eureka
