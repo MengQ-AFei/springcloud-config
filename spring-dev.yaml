@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: springcloud-config
+    name: springcloud-config-9527
   cloud:
     gateway:
       routes:

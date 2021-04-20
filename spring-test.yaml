@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: springcloud-test
+    name: springcloud-test-80
   cloud:
     getway:
       routes:
