@@ -10,7 +10,7 @@ spring:
         - id: routes-commsumer-80
           uri: lb:cloud-spring-service
           predicates:
-            - Path=/payment/getid/**          
+            - Path=/payment/getid/**           
 eureka:
   client:
   instance:
