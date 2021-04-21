@@ -11,7 +11,7 @@ spring:
           uri: lb:cloud-spring-service
           predicates:
             - Path=/payment/getid/**           
-eureka: 
+eureka:  
   client:
   instance: 
     hostname: springcloud-80
