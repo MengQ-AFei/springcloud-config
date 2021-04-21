@@ -1,11 +1,13 @@
 spring:
   profiles:
-    active: pro
+    active: dev
 ---
 spring:
-  profiles: dev
+  application:
+    name: SpringCloud-3305
+  profiles: pro
 server:
-  port: 3305
+  port: 6666
 eureka:
   client:
     register-with-eureka: true
@@ -20,19 +22,20 @@ management:
         include: "*"
 ---
 server:
-  port: 3355
+  port: 7777
+spring:
+  application:
+    name: SpringCloud-3355
+  profiles: dev
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:7001/eureka
-spring:
-  profiles: pro
     #暴露监控端点
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-aa: 123
