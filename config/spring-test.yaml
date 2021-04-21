@@ -1,0 +1,22 @@
+server:
+  port:8088
+  
+spring:
+  application:
+    name: springcloud-test-80
+  cloud:
+    getway:
+      routes:
+        - id: routes-commsumer-80
+          uri: lb:cloud-spring-service
+          predicates:
+            - Path=/payment/getid/**           
+eureka:
+  client:
+  instance:
+    hostname: springcloud-80
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+       
