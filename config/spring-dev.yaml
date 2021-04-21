@@ -22,7 +22,7 @@ management:
         include: "*"
 ---
 server:
-  port: 7777
+  port: 8888
 spring:
   application:
     name: SpringCloud-3355
