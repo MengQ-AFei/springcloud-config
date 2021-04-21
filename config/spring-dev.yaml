@@ -1,5 +1,2 @@
 server:
-  port:9527
-username: admin
-password: 0701
-abc: aaa
+  port: 3305
